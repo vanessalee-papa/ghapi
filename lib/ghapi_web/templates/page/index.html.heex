@@ -1,0 +1,7 @@
+<section class="row">
+  <ul>
+    <%= for id <- @ids do %>
+        <li><%= link(id, to: "/#{id}") %></li>
+    <% end %>
+  </ul>
+</section>

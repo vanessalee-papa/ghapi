@@ -1,0 +1,10 @@
+<%= for c <- @comments do %>
+  <section class="row">
+    <div>
+      <%= c.created_at %> - <%= link(c.id, to: c.link) %><br/>
+      <%= c.comment %> <br/>
+      - <i><%= c.user %></i> <br/>
+      <hr>
+    </div>
+  </section>
+<% end %>
