@@ -9,8 +9,6 @@ defmodule Ghapi.Pulls do
           {:error, HTTPoison.Error.t()}
           | {:ok, HTTPoison.AsyncResponse | HTTPoison.Response}
   def request(url) do
-    authorization =
-    username =
     headers = [
       {"owner", "joinpapa"},
       {"repo", "backend"},
