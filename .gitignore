@@ -1,0 +1,86 @@
+# App artifacts
+/_build
+/db
+/deps
+/*.ez
+*.beam
+*.temp
+/assets/node_modules
+
+# Test related
+/cover/
+
+# Logs
+erl_crash.dump
+npm-debug.log
+
+# Secrets
+.envrc
+.env.*
+!.env.dist
+!.env.development
+!.env.test
+/config/*.secret.exs
+
+# Editor / OS / ENV specific
+.DS_Store
+tags
+tags.lock
+tags.temp
+.vscode
+.idea
+*.iml
+
+/_docker
+/postgres-data
+
+# Dumps and backups
+/*.dump
+/*.pgdump
+prive/db_dumps
+priv/data/timezones/
+
+# CTags
+.tags
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Plan
+/plan
+tmp/
+
+priv/k8s/certs/
+*.zip
+chart/values.yaml
+kubernetes/api/values
+kubernetes/worker/values
+kubernetes/gitlab/values
+
+.elixir_ls
+.iex.exs
+.env
+
+doc/
+
+/temp
+
+/bin/dev
+
+REVISION
+*.tar
+*.tar.gz
