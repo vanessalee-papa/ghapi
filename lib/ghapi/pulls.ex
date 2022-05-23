@@ -9,9 +9,14 @@ defmodule Ghapi.Pulls do
           {:error, HTTPoison.Error.t()}
           | {:ok, HTTPoison.AsyncResponse | HTTPoison.Response}
   def request(url) do
-    username = Application.get_env(:ghapi, :username)
-    auth = "token #{Application.get_env(:ghapi, :token)}"
-    headers = [{"owner", "joinpapa"}, {"repo", "backend"}, {"username", username}, {"Authorization", auth}]
+    authorization =
+    username =
+    headers = [
+      {"owner", "joinpapa"},
+      {"repo", "backend"},
+      Ghapi.Auth.header(:username),
+      Ghapi.Auth.header(:authorization)
+    ]
     options = [ssl: [{:versions, [:'tlsv1.2']}], recv_timeout: :infinity]
 
     HTTPoison.get(url, headers, options)

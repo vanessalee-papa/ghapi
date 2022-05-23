@@ -7,7 +7,6 @@ defmodule GhapiWeb.PageController do
   end
 
   def comments(conn, %{"id" => id}) do
-    IO.inspect(Ghapi.Pulls.get_by_id(id), label: "id")
     comments = Ghapi.Pulls.get_by_id(id)
     render conn, "comment.html", comments: comments
   end
